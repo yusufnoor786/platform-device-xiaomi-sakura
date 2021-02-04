@@ -94,8 +94,8 @@ void vendor_load_properties()
 	load_dalvik_properties();
 
 	// fingerprint
-	property_override("ro.build.description", "redfin-user 11 RD1A.201105.003.A1 6886512 release-keys");
-	property_override_multifp("ro.build.fingerprint", "ro.system.build.fingerprint", "ro.vendor.build.fingerprint", "ro.bootimage.build.fingerprint", "google/redfin/redfin:11/RD1A.201105.003.A1/6886512:user/release-keys");
+	property_override("ro.build.description", "redfin-user 11 RD1A.210205.004 7038034 release-keys");
+	property_override_multifp("ro.build.fingerprint", "ro.system.build.fingerprint", "ro.vendor.build.fingerprint", "ro.bootimage.build.fingerprint", "google/redfin/redfin:11/RD1A.210205.004/7038034:user/release-keys");
 	
 	// Magisk Hide
 	property_override("ro.boot.verifiedbootstate", "green");

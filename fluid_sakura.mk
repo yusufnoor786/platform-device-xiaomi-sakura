@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2017 The LineageOS Project
+# Copyright (C) 2017-2021 The Project Fluid
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -24,21 +24,22 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/handheld_system_ext.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_system_ext.mk)
 
-# Inherit from mido device
+# Inherit from sakura device
 $(call inherit-product, device/xiaomi/sakura/device.mk)
 
-# Inherit some common FalconOS stuff.
-$(call inherit-product, vendor/xtended/config/common_full_phone.mk)
+# Inherit some common Fluid stuff.
+$(call inherit-product, vendor/fluid/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions
 DEVICE_MAINTAINER := Zabuka Zuzu
 PRODUCT_DEVICE := sakura
-PRODUCT_NAME := xtended_sakura
+PRODUCT_NAME := fluid_sakura
 BOARD_VENDOR := Xiaomi
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi 6 Pro
 PRODUCT_MANUFACTURER := Xiaomi
 TARGET_VENDOR := Xiaomi
+
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
@@ -53,4 +54,7 @@ TARGET_INCLUDE_STOCK_ARCORE := true
 # Boot Animation
 TARGET_BOOT_ANIMATION_RES := 1080
 
-XTENDED_MAINTAINER := Zabuka_Zuzu
+#Fluid AboutPhone
+PRODUCT_PRODUCT_PROPERTIES += \
+   ro.fluid.maintainer=Zabuka Zuzu \
+   ro.fluid.cpu=SD625
